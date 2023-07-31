@@ -33,3 +33,14 @@ resource "aws_ebs_volume" "db_ebs" {
   tags = local.common_tags
 }
 ```
+### Add additional tags with common tags
+```
+resource "aws_instance" "app-dev" {
+   ami = "ami-082b5a644766e0e6f"
+   instance_type = "t2.micro"
+   tags = merge({
+    Name = "demo-tf-ec2"
+    Env  = "Dev"
+  }, local.common_tags)
+}
+```
