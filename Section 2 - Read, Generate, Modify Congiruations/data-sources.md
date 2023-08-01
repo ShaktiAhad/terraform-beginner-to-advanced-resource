@@ -26,3 +26,9 @@ resource "aws_instance" "instance-1" {
    instance_type = "t2.micro"
 }
 ```
+
+### More info
+In the [aws_describe_images]([http://a.com](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html)https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html)
+```
+--filters "Name=name<Key name and MUST be in lowercase>,Values=amzn2-ami-hvm*<Key value>"
+```
