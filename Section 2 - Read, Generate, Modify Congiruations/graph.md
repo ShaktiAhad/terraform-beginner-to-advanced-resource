@@ -36,12 +36,12 @@ resource "aws_security_group" "allow_tls" {
 }
 ```
 
-
-
 ### Commands Used:
 ```sh
 terraform graph > graph.dot
 yum install graphviz
 cat graph.dot | dot -Tsvg > graph.svg
 ```
+**for Mac:** 
+`terraform graph | dot -Tpng > graph.png`
 
