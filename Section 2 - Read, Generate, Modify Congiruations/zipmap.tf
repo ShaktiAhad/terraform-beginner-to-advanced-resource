@@ -34,3 +34,7 @@ resource "aws_iam_user" "iam_users" {
 output "iam_users_arn" {
   value = zipmap(values(aws_iam_user.iam_users)[*].name, values(aws_iam_user.iam_users)[*].arn)
 }
+
+output "iam" {
+  value = {for k, v in aws_iam_user.iam_users: k => v.arn}
+}
