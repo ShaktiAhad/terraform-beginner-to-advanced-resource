@@ -3,5 +3,6 @@ terraform {
     bucket = "kplabs-terraform-backend"
     key    = "network/eip.tfstate"
     region = "us-east-1"
+    profile = "value"
   }
 }
